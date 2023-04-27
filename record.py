@@ -10,10 +10,10 @@ import urllib.parse
 import winsound
 
 # Set the base URL for the Voicevox API
-base_url = 'http://192.168.1.247:50021'
+base_url = 'http://localhost:50021'
 
 # Create a DeepL translator object
-translator = deepl.Translator('53dbe3f7-3e14-5dbb-0689-c26e3e977575:fx')
+translator = deepl.Translator('YOUR_OWN_DEEPL_API_KEY')
 
 
 def record(output_filename):
