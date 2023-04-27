@@ -1,0 +1,4 @@
+deepl
+keyboard
+pyaudio
+requests
