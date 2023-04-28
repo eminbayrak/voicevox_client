@@ -1,5 +1,6 @@
 # DEMO:
-[![Watch the video](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fembed.pixiv.net%2Fartwork.php%3Fillust_id%3D99564297&f=1&nofb=1&ipt=4e7ace93fb95a68830fda614f7c9645ec3cbeed0aa92d24b9935be7ed2ff95ca&ipo=images)](https://youtu.be/aHW2es-idMA)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+
 # README
 
 This script records audio from your microphone and sends it to the [Whisper AI](https://whisper.ai/) to transcribe it into text. Then it uses [DeepL](https://www.deepl.com/) to translate the text from English to Japanese, and finally, it calls the [VoiceVox Engine](https://github.com/Hiroshiba/voicevox_engine) to generate speech from the translated Japanese text and plays it back.
