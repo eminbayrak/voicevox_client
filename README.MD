@@ -5,7 +5,7 @@ This script records audio from your microphone and sends it to the [Whisper AI](
 ## Requirements
 
 - Python 3
-- [Whisper AI](https://whisper.ai/) installed on your machine
+- [Whisper AI](https://openai.com/research/whisper) installed on your machine, [pip install](pip install git+https://github.com/openai/whisper.git)
 - [DeepL API key](https://www.deepl.com/pro/change-plan/api)
 - [VoiceVox Engine Docker image](https://hub.docker.com/r/voicevox/voicevox_engine) running in a Docker container. You can pull the image by running `docker pull voicevox/voicevox_engine:cpu-ubuntu20.04-latest` and start the container by running `docker run --rm -it -p '127.0.0.1:50021:50021' voicevox/voicevox_engine:cpu-ubuntu20.04-latest` command.
 
