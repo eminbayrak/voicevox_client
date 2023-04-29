@@ -13,23 +13,27 @@ import winsound
 base_url = 'http://localhost:50021'
 
 # Create a DeepL translator object
-translator = deepl.Translator('YOUR_OWN_DEEPL_API_KEY')
+translator = deepl.Translator('53dbe3f7-3e14-5dbb-0689-c26e3e977575:fx')
+
+# Define the audio settings
+CHUNK = 512
+FORMAT = pyaudio.paInt16
+CHANNELS = 1
+RATE = 22050
+
+# Initialize PyAudio and audio stream objects
+audio = pyaudio.PyAudio()
+stream = None
+
+# Initialize recording variables
+is_recording = False
+frames = []
 
 
 def record(output_filename):
-    # CHUNK = 1024
-    # FORMAT = pyaudio.paInt16
-    # CHANNELS = 1
-    # RATE = 44100
-    CHUNK = 512
-    FORMAT = pyaudio.paInt16
-    CHANNELS = 1
-    RATE = 22050
+    global is_recording, frames, stream
 
-    audio = pyaudio.PyAudio()
-
-    is_recording = False
-    frames = []
+    print('Press R on your keyboard to start recording..')
 
     while True:
         if keyboard.is_pressed('r') and not is_recording:
@@ -45,8 +49,6 @@ def record(output_filename):
             print('Recording stopped')
             is_recording = False
             stream.stop_stream()
-            stream.close()
-            audio.terminate()
 
             # Save audio as WAV file
             filename = f'{output_filename}.wav'
@@ -70,7 +72,7 @@ def record(output_filename):
             # Translate the English text to Japanese
             japanese_text = translator.translate_text(
                 english_text, target_lang='JA')
-            print(f'(Japanese text: {japanese_text}')
+            print(f'Japanese text: {japanese_text}')
 
             # Call VoiceVox Engine
             speaker_id = '5'  # Character voice id
