@@ -13,7 +13,7 @@ import winsound
 base_url = 'http://localhost:50021'
 
 # Create a DeepL translator object
-translator = deepl.Translator('53dbe3f7-3e14-5dbb-0689-c26e3e977575:fx')
+translator = deepl.Translator('YOUR_DEEPL_API_KEY')
 
 # Define the audio settings
 CHUNK = 512
