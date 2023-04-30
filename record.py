@@ -8,12 +8,15 @@ import deepl
 import requests
 import urllib.parse
 import winsound
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Set the base URL for the Voicevox API
 base_url = 'http://localhost:50021'
 
 # Create a DeepL translator object
-translator = deepl.Translator('YOUR_DEEPL_API_KEY')
+translator = deepl.Translator(os.getenv('DEEPLY_API_KEY'))
 
 # Define the audio settings
 CHUNK = 512
