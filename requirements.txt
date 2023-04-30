@@ -2,3 +2,4 @@ deepl
 keyboard
 pyaudio
 requests
+python-dotenv
